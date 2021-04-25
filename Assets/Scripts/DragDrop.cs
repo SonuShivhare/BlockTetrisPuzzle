@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Windows;
 
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -19,6 +20,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rigidbody = GetComponent<Rigidbody2D>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponent<Canvas>();
+
+    }
+    private void Start()
+    {
+        
     }
 
     public void OnPointerDown(PointerEventData eventData)

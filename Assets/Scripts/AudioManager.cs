@@ -41,6 +41,6 @@ public class AudioManager : MonoBehaviour
 
     public void SnapBackSound()
     {
-        if (isActive) audio.PlayOneShot(snapBackSound);
+        if (isActive && !audio.isPlaying) audio.PlayOneShot(snapBackSound);
     }
 }
